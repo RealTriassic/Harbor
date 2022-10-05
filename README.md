@@ -1,10 +1,10 @@
 # Harbor
 
-An Alpine based VM with root acess.
+An Alpine based VM with root access.
 
 ## Description
 
-Harbor is a Alpine based VM with root acess built to use on platforms which uses Docker Containers to deploy services. It is a single file piece of code made using Golang.
+Harbor is a Alpine based VM with root access built to use on platforms which uses Docker Containers to deploy services. It is a single file piece of code made using Golang.
 
 ## Getting Started
 
