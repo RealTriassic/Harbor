@@ -1,7 +1,7 @@
 <div align="center">
   <img alt="Harbor Logo" src=".github/assets/harbor.png" width="500">
 
-  ## Alpine based Virtual Machines with root privileges.
+  ### Alpine based Virtual Machines with root privileges.
 </div>
 
 &nbsp;
@@ -13,18 +13,18 @@ Written in GoLang, Harbor is a tool that allows you to turn your Docker Containe
 
 # Getting Started
 
-## Dependencies
+### Dependencies
 * Any hosting provider that utilizes Docker containers.
 * The hosting provider must allow running unverified applications.
 
 
-## Installation
+### Installation
 * Download the latest Harbor executable file from GitHub releases.
 * Make it an executable by running `chmod +x Harbor`.
 * Upload it to the hosting service replacing the original file that is used to run the server, in the case that the hosting service does not support executables, you can download a third-party wrapper from elsewhere.
 
 
-## Help
+### Help
 If you face any errors or issue while using Harbor, feel free to create an issue on our GitHub repository.
 
 &nbsp;
@@ -32,13 +32,15 @@ If you face any errors or issue while using Harbor, feel free to create an issue
 # Authors
 * [@BearCodes](https://bearcodes.vercel.app/)
 
-&nbsp;
 
 # License
 This project is licensed under the MIT License - see the **LICENSE** file for more details.
 
-## Acknowledgments
+### Acknowledgments
 People who have helped to create and maintain this project in some way.
 
 * [@BearCodes](https://bearcodes.vercel.app/) - Creator.
 * [@Triassic](https://triassic.dev) - Java wrapper creator & maintainer.
+
+### Community
+[Join our Discord Guild](https://discord.gg/9mBB7NR9rK) and connect with other people using Harbor!
