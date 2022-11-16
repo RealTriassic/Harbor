@@ -1,46 +1,46 @@
-# Harbor
+<div align="center">
+  <img alt="Harbor Logo" src=".github/assets/harbor.png" width="500">
 
-An Alpine based VM with root access.
+  ### Alpine based Virtual Machines with root privileges.
+</div>
 
-## Description
+&nbsp;
 
-Harbor is a Alpine based VM with root access built to use on platforms which uses Docker Containers to deploy services. It is a single file piece of code made using Golang.
+# What is Harbor
+Written in GoLang, Harbor is a tool that allows you to turn your Docker Container based server into a powerful virtual machine with root privileges. The goal is to provide a tool that will run on as many hosting services as possible, mostly hosts utilizing Pterodactyl Panel, with as little of a footprint as possible.
 
-## Getting Started
+&nbsp;
+
+# Getting Started
 
 ### Dependencies
+* Any hosting provider that utilizes Docker containers.
+* The hosting provider must allow running unverified applications.
 
-* A PaaS provider which uses Docker (Will work on most hosts which uses Pterodactyl Panel)
 
-### Installing
+### Installation
+* Download the latest Harbor executable file from GitHub releases.
+* Make it an executable by running `chmod +x Harbor`.
+* Upload it to the hosting service replacing the original file that is used to run the server, in the case that the hosting service does not support executables, you can download a third-party wrapper from elsewhere.
 
-* Download the `Harbor` 
-* Make it an executable [ `chmod +x Harbor` ]
-* Deploy it on your PaaS service. If the platform does not support direct file execution, you can download Py, Js or Java wrappers for Harbor from the `Wrappers` Directory of this repository.
 
-## Help
+### Help
+If you face any errors or issue while using Harbor, feel free to create an issue on our GitHub repository.
 
-If you face any errors or issue while using rawr, feel free to use the `issues` tab in github.
+&nbsp;
 
-## Authors
-
+# Authors
 * [@BearCodes](https://bearcodes.vercel.app/)
 
 
-## Version History
+# License
+This project is licensed under the MIT License - see the **LICENSE** file for more details.
 
-* 0.2
-    * Various bug fixes and optimizations
-    * Migrated to Alpine from Debian
-* 0.1
-    * Initial Release
+### Acknowledgments
+People who have helped to create and maintain this project in some way.
 
-## License
+* [@BearCodes](https://bearcodes.vercel.app/) - Creator.
+* [@Triassic](https://triassic.dev) - Java wrapper creator & maintainer.
 
-This project is licensed under the `[MIT]` License - see the **LICENSE** file for details
-
-## Acknowledgments
-
-People who have helped to create and maintain this project.
-* [@BearCodes](https://bearcodes.vercel.app/) - Creator
-* [@Triassic]('') - Java wrapper creator and maintainer
+### Community
+[Join our Discord Guild](https://discord.gg/9mBB7NR9rK) and connect with other people using Harbor!
