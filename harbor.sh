@@ -42,7 +42,7 @@ if [ ! -e $ROOTFS_DIR/.installed ]; then
     wget --no-hsts -O /tmp/gotty.tar.gz "https://github.com/sorenisanerd/gotty/releases/download/v1.5.0/gotty_v1.5.0_linux_${ARCH_ALT}.tar.gz"
     wget --no-hsts -O $ROOTFS_DIR/usr/local/bin/proot "https://proot.gitlab.io/proot/bin/proot"
     # Extract everything that needs to be extracted.
-	tar -xzf /tmp/apk-tools-static.apk -C /tmp/
+    tar -xzf /tmp/apk-tools-static.apk -C /tmp/
     tar -xzf /tmp/gotty.tar.gz -C $ROOTFS_DIR/usr/local/bin
     # Install base system packages using the static APK-Tools.
     /tmp/sbin/apk.static -X "https://dl-cdn.alpinelinux.org/alpine/v${ALPINE_VERSION}/main/" -U --allow-untrusted --root $ROOTFS_DIR add alpine-base apk-tools
