@@ -25,10 +25,10 @@ fi
 # Download & decompress the Alpine linux root file system if not already installed.
 if [ ! -e $ROOTFS_DIR/.installed ]; then
     # Download Alpine Linux root file system.
-	wget --no-hsts -O /tmp/rootfs.tar.gz \
+    wget --no-hsts -O /tmp/rootfs.tar.gz \
     "https://dl-cdn.alpinelinux.org/alpine/v${ALPINE_VERSION}/releases/${ARCH}/alpine-minirootfs-${ALPINE_FULL_VERSION}-${ARCH}.tar.gz"
     # Extract the Alpine Linux root file system.
-	tar -xzf /tmp/rootfs.tar.gz -C $ROOTFS_DIR
+    tar -xzf /tmp/rootfs.tar.gz -C $ROOTFS_DIR
 fi
 
 ################################
@@ -38,7 +38,7 @@ fi
 # Download static APK-Tools temporarily because minirootfs does not come with APK pre-installed.
 if [ ! -e $ROOTFS_DIR/.installed ]; then
     # Download the packages from their sources.
-	wget --no-hsts -O /tmp/apk-tools-static.apk "https://dl-cdn.alpinelinux.org/alpine/v${ALPINE_VERSION}/main/${ARCH}/apk-tools-static-${APK_TOOLS_VERSION}.apk"
+    wget --no-hsts -O /tmp/apk-tools-static.apk "https://dl-cdn.alpinelinux.org/alpine/v${ALPINE_VERSION}/main/${ARCH}/apk-tools-static-${APK_TOOLS_VERSION}.apk"
     wget --no-hsts -O /tmp/gotty.tar.gz "https://github.com/sorenisanerd/gotty/releases/download/v1.5.0/gotty_v1.5.0_linux_${ARCH_ALT}.tar.gz"
     wget --no-hsts -O $ROOTFS_DIR/usr/local/bin/proot "https://proot.gitlab.io/proot/bin/proot"
     # Extract everything that needs to be extracted.
@@ -53,9 +53,9 @@ fi
 # Clean-up after installation complete & finish up.
 if [ ! -e $ROOTFS_DIR/.installed ]; then
     # Wipe the files we downloaded into /tmp previously.
-	rm -rf /tmp/apk-tools-static.apk /tmp/rootfs.tar.gz /tmp/sbin
+    rm -rf /tmp/apk-tools-static.apk /tmp/rootfs.tar.gz /tmp/sbin
     # Create .installed to later check whether Alpine is installed.
-	touch $ROOTFS_DIR/.installed
+    touch $ROOTFS_DIR/.installed
 fi
 
 # Print some useful information to the terminal before entering PRoot.
