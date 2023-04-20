@@ -34,13 +34,10 @@ If you face any errors or issue while using Harbor, feel free to create an issue
 
 
 # License
-This project is licensed under the MIT License - see the **LICENSE** file for more details.
+This project is licensed under the Creative Commons Zero v1.0 Universal License - see the **LICENSE** file for more details.
 
 ### Acknowledgments
 People who have helped to create and maintain this project in some way.
 
 * [@BearCodes](https://bearcodes.vercel.app/) - Creator.
 * [@Triassic](https://triassic.dev) - Java wrapper creator & maintainer.
-
-### Community
-[Join our Discord Guild](https://discord.gg/9mBB7NR9rK) and connect with other people using Harbor!
