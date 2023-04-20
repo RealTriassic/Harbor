@@ -18,7 +18,7 @@ Harbor is a script that downloads, configures and runs [Alpine Linux](https://al
 
 ### Minimum System Requirements
 The server must have all of the following system requirements to run:
-* `x86_64` or `AARCH64` CPU.*
+* `x86_64` or `AARCH64` CPU*
 * 40 Megabytes Available Disk Space*
 * 35 Megabytes Available RAM
 * Internet Connectivity
