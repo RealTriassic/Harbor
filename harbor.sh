@@ -57,6 +57,8 @@ fi
 
 # Clean-up after installation complete & finish up.
 if [ ! -e $ROOTFS_DIR/.installed ]; then
+    # Add DNS Resolver nameservers to resolv.conf.
+    printf "nameserver 1.1.1.1\nnameserver 1.0.0.1" > ${ROOTFS_DIR}/etc/resolv.conf
     # Wipe the files we downloaded into /tmp previously.
     rm -rf /tmp/apk-tools-static.apk /tmp/rootfs.tar.gz /tmp/sbin
     # Create .installed to later check whether Alpine is installed.
@@ -104,7 +106,6 @@ $ROOTFS_DIR/usr/local/bin/proot \
 --kill-on-exit \
 --root-id \
 --cwd=/root \
---bind=/etc/resolv.conf \
 --bind=/proc \
 --bind=/dev \
 --bind=/sys \
