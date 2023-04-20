@@ -1,4 +1,5 @@
 #!/bin/bash
+
 #############################
 # Alpine Linux Installation #
 #############################
@@ -16,10 +17,14 @@ APK_TOOLS_VERSION="2.12.10-r1" # Make sure to update this too when updating Alpi
 ARCH=$(uname -m)
 
 # Check machine architecture to make sure it is supported.
+# If not, we exit with a non-zero status code.
 if [[ "$ARCH" == "x86_64" ]]; then
   ARCH_ALT=amd64
 elif [[ "$ARCH" == "aarch64" ]]; then
   ARCH_ALT=arm64
+else
+  printf "Unsupported architecture: ${ARCH}"
+  exit 1
 fi
 
 # Download & decompress the Alpine linux root file system if not already installed.
