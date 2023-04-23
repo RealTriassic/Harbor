@@ -1,5 +1,3 @@
-package com.triassic.harbor
-
 import java.io.File
 import java.net.URL
 import java.nio.file.Files

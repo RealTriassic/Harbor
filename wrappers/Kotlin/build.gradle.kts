@@ -30,5 +30,5 @@ tasks.shadowJar {
 }
 
 application {
-    mainClass.set("com.triassic.harbor.MainKt")
+    mainClass.set("MainKt")
 }
