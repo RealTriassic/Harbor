@@ -29,11 +29,12 @@ jobs:
           cd wrappers/Kotlin
           chmod +x gradlew
           ./gradlew shadowJar
-      - uses: actions/upload-artifact@v2
+          mv build/libs/Harbor-1.0.0-all.jar .
+      - uses: actions/upload-artifact@v3
         with:
           name: Artifacts
           path: |
             wrappers/Javascript/harbor.js
             wrappers/Python/harbor.py
-            wrappers/Kotlin/build/libs/Harbor-1.0.0-all.jar
+            wrappers/Kotlin/harbor-1.0.0-all.jar
             harbor.sh
