@@ -1,0 +1,26 @@
+name: Build and Package
+on: [pull_request, push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Compile Kotlin wrapper
+      uses: gradle-actions/setup-gradle@v1
+      with:
+        gradle-version: 8.1
+      run: |
+        ./gradlew clean shadowJar
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: Artifacts
+        path: |
+          wrappers/Javascript/harbor.js
+          wrappers/Python/harbor.py
+          build/libs/
+          harbor.sh
