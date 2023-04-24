@@ -26,8 +26,8 @@ jobs:
             ${{ runner.os }}-gradle-
       - name: Compile Kotlin Wrapper
         run: |
-        cd wrappers/Kotlin
-        ./gradlew shadowJar
+          cd wrappers/Kotlin
+          ./gradlew shadowJar
       - uses: actions/upload-artifact@v2
         with:
           name: Artifacts
