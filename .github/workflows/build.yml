@@ -25,7 +25,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
       - name: Compile Kotlin Wrapper
-        run: ./gradlew shadowJar
+        run: |
+        cd wrappers/Kotlin
+        ./gradlew shadowJar
       - uses: actions/upload-artifact@v2
         with:
           name: Artifacts
