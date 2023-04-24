@@ -35,5 +35,5 @@ jobs:
           path: |
             wrappers/Javascript/harbor.js
             wrappers/Python/harbor.py
-            build/libs/harbor-1.0.0-all.jar
+            wrappers/Kotlin/build/libs/Harbor-1.0.0-all.jar
             harbor.sh
