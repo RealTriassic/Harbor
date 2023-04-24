@@ -29,7 +29,7 @@ jobs:
           cd wrappers/Kotlin
           chmod +x gradlew
           ./gradlew shadowJar
-          mv build/libs/Harbor-1.0.0-all.jar .
+          mv build/libs/harbor-1.0.0-all.jar .
       - uses: actions/upload-artifact@v3
         with:
           name: Artifacts
