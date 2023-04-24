@@ -27,6 +27,7 @@ jobs:
       - name: Compile Kotlin Wrapper
         run: |
           cd wrappers/Kotlin
+          chmod +x gradlew
           ./gradlew shadowJar
       - uses: actions/upload-artifact@v2
         with:
