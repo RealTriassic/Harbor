@@ -12,6 +12,7 @@ ROOTFS_DIR=/home/container
 ALPINE_VERSION="3.17"
 ALPINE_FULL_VERSION="3.17.3"
 APK_TOOLS_VERSION="2.12.10-r1" # Make sure to update this too when updating Alpine Linux.
+PROOT_VERSION="5.3.0" # Some releases do not have static builds attached.
 
 # Detect the machine architecture.
 ARCH=$(uname -m)
@@ -45,7 +46,7 @@ if [ ! -e $ROOTFS_DIR/.installed ]; then
     # Download the packages from their sources.
     wget --no-hsts -O /tmp/apk-tools-static.apk "https://dl-cdn.alpinelinux.org/alpine/v${ALPINE_VERSION}/main/${ARCH}/apk-tools-static-${APK_TOOLS_VERSION}.apk"
     wget --no-hsts -O /tmp/gotty.tar.gz "https://github.com/sorenisanerd/gotty/releases/download/v1.5.0/gotty_v1.5.0_linux_${ARCH_ALT}.tar.gz"
-    wget --no-hsts -O $ROOTFS_DIR/usr/local/bin/proot "https://proot.gitlab.io/proot/bin/proot"
+    wget --no-hsts -O $ROOTFS_DIR/usr/local/bin/proot "https://github.com/proot-me/proot/releases/download/v${PROOT_VERSION}/proot-v${PROOT_VERSION}-${ARCH}-static"
     # Extract everything that needs to be extracted.
     tar -xzf /tmp/apk-tools-static.apk -C /tmp/
     tar -xzf /tmp/gotty.tar.gz -C $ROOTFS_DIR/usr/local/bin
