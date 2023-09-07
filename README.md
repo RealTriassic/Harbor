@@ -11,10 +11,10 @@ Harbor is a script that downloads, configures and runs [Alpine Linux](https://al
 &nbsp;
 
 # Roadmap
-- [ ] Full `AARCH64` support.
+- [x] Full `AARCH64` support.
 - [ ] Automatically fetch latest Alpine version.
 - [ ] Automatic script updater.
-- [ ] Create some basic wrappers for the script.
+- [x] Create some basic wrappers for the script.
 
 &nbsp;
 
