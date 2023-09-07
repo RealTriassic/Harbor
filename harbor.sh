@@ -10,7 +10,7 @@ ROOTFS_DIR=/home/container
 
 # Define the Alpine Linux version we are going to be using.
 ALPINE_VERSION="3.18"
-ALPINE_FULL_VERSION="3.18.2"
+ALPINE_FULL_VERSION="3.18.3"
 APK_TOOLS_VERSION="2.14.0-r2" # Make sure to update this too when updating Alpine Linux.
 PROOT_VERSION="5.3.0" # Some releases do not have static builds attached.
 
@@ -31,7 +31,7 @@ fi
 # Download & decompress the Alpine linux root file system if not already installed.
 if [ ! -e $ROOTFS_DIR/.installed ]; then
     # Download Alpine Linux root file system.
-    wget --no-hsts -O /tmp/rootfs.tar.gz \
+    curl -Lo /tmp/rootfs.tar.gz \
     "https://dl-cdn.alpinelinux.org/alpine/v${ALPINE_VERSION}/releases/${ARCH}/alpine-minirootfs-${ALPINE_FULL_VERSION}-${ARCH}.tar.gz"
     # Extract the Alpine Linux root file system.
     tar -xzf /tmp/rootfs.tar.gz -C $ROOTFS_DIR
@@ -44,9 +44,9 @@ fi
 # Download static APK-Tools temporarily because minirootfs does not come with APK pre-installed.
 if [ ! -e $ROOTFS_DIR/.installed ]; then
     # Download the packages from their sources.
-    wget --no-hsts -O /tmp/apk-tools-static.apk "https://dl-cdn.alpinelinux.org/alpine/v${ALPINE_VERSION}/main/${ARCH}/apk-tools-static-${APK_TOOLS_VERSION}.apk"
-    wget --no-hsts -O /tmp/gotty.tar.gz "https://github.com/sorenisanerd/gotty/releases/download/v1.5.0/gotty_v1.5.0_linux_${ARCH_ALT}.tar.gz"
-    wget --no-hsts -O $ROOTFS_DIR/usr/local/bin/proot "https://github.com/proot-me/proot/releases/download/v${PROOT_VERSION}/proot-v${PROOT_VERSION}-${ARCH}-static"
+    curl -Lo /tmp/apk-tools-static.apk "https://dl-cdn.alpinelinux.org/alpine/v${ALPINE_VERSION}/main/${ARCH}/apk-tools-static-${APK_TOOLS_VERSION}.apk"
+    curl -Lo /tmp/gotty.tar.gz "https://github.com/sorenisanerd/gotty/releases/download/v1.5.0/gotty_v1.5.0_linux_${ARCH_ALT}.tar.gz"
+    curl -Lo $ROOTFS_DIR/usr/local/bin/proot "https://github.com/proot-me/proot/releases/download/v${PROOT_VERSION}/proot-v${PROOT_VERSION}-${ARCH}-static"
     # Extract everything that needs to be extracted.
     tar -xzf /tmp/apk-tools-static.apk -C /tmp/
     tar -xzf /tmp/gotty.tar.gz -C $ROOTFS_DIR/usr/local/bin
