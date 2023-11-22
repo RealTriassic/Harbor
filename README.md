@@ -43,7 +43,7 @@ If you face any errors or issues while using Harbor, feel free to [create an iss
 * [@RealTriassic](https://github.com/RealTriassic)
 
 # License
-This project is licensed under the Creative Commons Zero v1.0 Universal - see the [LICENSE](LICENSE) file for more details.
+This project is licensed under the GNU General Public License v3.0 license - see the [LICENSE](LICENSE) file for more details.
 
 ### Acknowledgments
 People who have helped to create and maintain this project in some way.
